@@ -1,0 +1,91 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-image: url('../../assets/images/bg.jpeg');
+    background-size: cover;
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #e5e5e5;
+}
+
+.card-image {
+    height: 128px;
+    width: 128px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    overflow: hidden; /* Hide the part of the image that goes beyond the container */
+}
+// .card-image {
+//     width: 100%; /* Make the image fill the container */
+//     height: 200px; /* Set a fixed height or use 'auto' depending on the desired aspect ratio */
+//     overflow: hidden; /* Hide the part of the image that goes beyond the container */
+// }
+
+.card-image img {
+    width: 100%; /* Ensure the image width fills the container */
+    height: 100%; /* Ensure the image height fills the container */
+    object-fit: cover; /* Optionally, use 'cover' or 'contain' based on your design */
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 24px;
+    }
+
+    .dashboard {
+        padding: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 24px;
+    }
+
+    .dashboard {
+        padding: 32px;
+    }
+}
+
+/* Hide navigation on mobile */
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}

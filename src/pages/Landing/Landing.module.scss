@@ -1,0 +1,105 @@
+.landing-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/images/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+}
+
+.content-wrapper {
+    max-width: 70%;
+}
+
+.title {
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: start;
+}
+
+.description {
+    font-size: 1.6rem;
+    color: rgb(229, 229, 229);
+    margin-bottom: 3rem;
+    max-width: 90%;
+    line-height: 1.6;
+    font-style: italic;
+    text-align: justify;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.button-login {
+    background-color: transparent;
+    color: white;
+}
+
+.button-login:hover {
+    background-color: white;
+    color: #0a192f;
+}
+
+.button-signup {
+    background-color: white;
+    color: #0a192f;
+}
+
+.button-signup:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .content-overlay {
+        padding: 3rem 3rem;
+    }
+
+    .title {
+        font-size: 8.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-overlay {
+        padding: 3rem 6rem;
+    }
+}

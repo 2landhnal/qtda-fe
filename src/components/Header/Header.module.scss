@@ -1,0 +1,63 @@
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        /* Màu mờ ở phía trên */ rgba(0, 0, 0, 0)
+            /* Hoàn toàn trong suốt ở phía dưới */
+    ); // Màu nền mờ
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Thêm hiệu ứng đổ bóng
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &.scrolled {
+    }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #333;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
+    cursor: pointer;
+}
